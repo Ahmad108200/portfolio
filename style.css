@@ -44,11 +44,11 @@ header {
   color: #ffff;
   display: none;
   position: relative;
+  width: 15%;
 }
 .menu-btn i {
-  color: grey;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 25px;
+  font-weight: 600;
 }
 .navbar {
   margin-top: 15px;
@@ -235,10 +235,8 @@ footer {
   margin: 9px;
 }
 .copyrights {
-  display: flex;
   border-top: 2px solid #464646;
   font-size: 15px;
-  background: #1d1d1d;
   color: #464646;
   text-align: center;
 }
@@ -269,6 +267,10 @@ footer {
   font-weight: 500;
   padding-left: 95px;
 }
+.mainimg {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
 .proimg {
   background: url(images/myproject.png);
   height: 350px;
@@ -280,10 +282,20 @@ footer {
   position: relative;
   justify-content: center;
 }
+.proimg2 {
+  background: url(images/Crypto.png);
+  height: 350px;
+  width: 400px;
+  margin: 75px;
+  object-fit: cover;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
 /* contact css */
 .contactheader {
   font-size: 20px;
-  margin-left: 495px;
+  margin-left: 480px;
   color: #ffff;
   text-transform: capitalize;
 }
@@ -299,8 +311,11 @@ footer {
 }
 .contacticon {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  padding: 30px;
+  grid-template-columns: repeat(4, 1.5fr);
+  padding: 90px;
+}
+.contacticon span {
+  padding-bottom: 30px;
 }
 /* media querie */
 @media only screen and (max-width: 768px) {
@@ -335,13 +350,9 @@ footer {
     /* background: #464646; */
     transform: translate(-500px);
     transition: 0.5s ease-in-out;
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* background: #ffff; */
-    /* text-align: justify; */
   }
   .btn-media.show {
-    transform: translate(-20px);
+    transform: translate(-10px);
     transition: 0.5s ease-in-out;
   }
   nav {
@@ -361,7 +372,10 @@ footer {
     padding: 20%;
   }
   .banner-about {
-    padding: 10%;
+    padding: 7%;
+  }
+  .banner-about h2 {
+    font-size: 30px;
   }
   .about {
     grid-template-columns: 1fr;
@@ -398,18 +412,22 @@ footer {
   }
   .projects {
     font-size: 15px;
-    margin-left: 0;
+    margin-left: -40px;
+  }
+  .mainimg {
+    display: flex;
+    flex-direction: column;
   }
   .proimg {
     height: 150px;
     width: 150px;
   }
-  .contactheader {
-    font-size: 15px;
-    margin-left: 0;
+  .proimg2 {
+    height: 150px;
+    width: 150px;
   }
-  .contacticon {
-    display: flex;
-    justify-content: space-evenly;
+  .contactheader {
+    font-size: 18px;
+    margin-left: 10px;
   }
 }
